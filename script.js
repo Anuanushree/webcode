@@ -10,8 +10,7 @@ let contain = document.createElement('div');
 contain.setAttribute('class', 'container-sm-12');
 
 let row = document.createElement('div')
-row.setAttribute('class', 'row text-center')
-row.setAttribute('class', "row row-cols-3 row-cols-md-6 g-6 sm-2 m-4")
+row.setAttribute('class', "row row-cols-1 row-cols-md-6 g-6 sm-2 m-4 text-center")
 container.append(row);
 
 let containbody = document.createElement('div');
