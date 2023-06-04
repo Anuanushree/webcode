@@ -18,11 +18,10 @@ containbody.setAttribute('class', 'container containbody')
 var image = document.createElement('img');
 image.setAttribute('class', 'img-fluid w-50 image')
 image.setAttribute('title', `click card to see details`);
-image.setAttribute('src', `logo.png`)
+image.setAttribute('src', `logo.png`);
 containbody.appendChild(image)
 
 document.body.appendChild(containbody);
-// containbody.style.display = "block";
 async function getPokemonNames() {
     try {
         let res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=50");
@@ -58,9 +57,11 @@ async function getPokemonNames() {
         let currentPage = 1;
         for (let buttons of btngroup) {
             buttons.addEventListener("click", () => {
+                // contain.innerHTML = " ";
+                contain.innerHTML=document.querySelector('.containbody').innerHTML;
                 let temp = document.getElementById(currentPage.toString());
                 let pageNumber;
-
+                
                 row.innerHTML = ``;
                 switch (buttons.id) {
                     case "First":
