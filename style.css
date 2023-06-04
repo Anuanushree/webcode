@@ -1,8 +1,9 @@
 
 .card {
     margin: 3px;
-    background-color: gray;
+    background-color:black;
     border: 1px solid blue;
+    color:white;
 }
 h1 {
 
@@ -27,7 +28,7 @@ body {
 
 .image {
     margin-left: 20%;
-    height: 15rem;
+    /* height: 18rem; */
 }
 
 ul {
@@ -50,7 +51,11 @@ ul {
     font-size: 1rem;
    
 }
-
+.containbody{
+ /* border:1px blue solid; */
+ width:70%;
+ height: 20rem;
+}
 .buttons {
  margin:40px;
  margin-left:15%;

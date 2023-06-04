@@ -2,7 +2,7 @@
 let container = document.createElement('div');
 container.setAttribute('class', 'content-fluid')
 let h1 = document.createElement('h1')
-h1.innerHTML = "POKEMONS";
+h1.innerHTML = "POKEMON";
 container.append(h1);
 document.body.appendChild(container);
 
@@ -18,7 +18,7 @@ containbody.setAttribute('class', 'container containbody')
 var image = document.createElement('img');
 image.setAttribute('class', 'img-fluid w-50 image')
 image.setAttribute('title', `click card to see details`);
-image.setAttribute('src', `charlie-img.jpg`)
+image.setAttribute('src', `logo.png`)
 containbody.appendChild(image)
 
 document.body.appendChild(containbody);
@@ -132,6 +132,9 @@ async function getPokemonData(arrayData, page) {
             img.setAttribute('title', `${data.name}`);
             img.setAttribute('src', `${data.sprites.other.dream_world.front_default}`)
             cardbody.appendChild(img)
+            let clickImg = document.createElement('img');
+            clickImg.setAttribute('src', `click img.gif`)
+            cardbody.appendChild(clickImg)
             card.append(cardbody)
 
             card.addEventListener('click', function (event) {
