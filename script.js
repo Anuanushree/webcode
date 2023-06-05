@@ -135,6 +135,7 @@ async function getPokemonData(arrayData, page) {
             cardbody.appendChild(img)
             let clickImg = document.createElement('img');
             clickImg.setAttribute('src', `click img.gif`)
+            clickImg.style.width="100px"
             cardbody.appendChild(clickImg)
             card.append(cardbody)
 

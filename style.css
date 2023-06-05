@@ -1,10 +1,25 @@
-
 .card {
-    margin: 3px;
-    background-color:black;
+    margin: 6px;
+    background-color: black;
     border: 1px solid blue;
-    color:white;
+    color: white;
 }
+
+.card:hover {
+    /* text-shadow: 2px 4px 3px 4px; */
+    /* background-color: aliceblue; */
+    /* box-shadow: 8px 28px 50px rgba(39, 44, 49, .07), 1px 6px 12px rgba(39, 44, 49, .04); */
+    /* transition: all .4s ease; */
+    transform: scale(1.1);
+    box-shadow: 0 10px 50px rgba(217, 31, 106, 0.5);
+
+}
+
+.card:active {
+    transform: scale(1.1);
+    box-shadow: 0 0 50px rgba(228, 49, 49, 0.5);
+}
+
 h1 {
 
     text-shadow: 0cqmax;
@@ -12,6 +27,7 @@ h1 {
     color: white;
     text-align: center;
 }
+
 .img {
     height: 5rem;
     width: 12rem;
@@ -40,25 +56,28 @@ ul {
     height: 20rem;
     overflow-y: scroll;
 }
+
 .btn {
-    color:blue;
-   border: 1px solid deeppink;
+    color: blue;
+    border: 1px solid deeppink;
     padding: 9px 16px;
     transition: background-color .3s;
     cursor: pointer;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
-   
+
 }
-.containbody{
- /* border:1px blue solid; */
- width:70%;
- height: 20rem;
+
+.containbody {
+    /* border:1px blue solid; */
+    width: 70%;
+    height: 20rem;
 }
+
 .buttons {
- margin:40px;
- margin-left:15%;
+    margin: 40px;
+    margin-left: 15%;
 }
 
 .btn:hover {
