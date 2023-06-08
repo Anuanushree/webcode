@@ -24,12 +24,12 @@ containbody.appendChild(image)
 document.body.appendChild(containbody);
 async function getPokemonNames() {
     try {
-        let res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=50");
-        let data = await res.json();
+        let response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=50");
+        let data = await response.json();
 
         let pageContent = data.results;
         getPokemonData(pageContent, 1);
-        //  To create page buttons
+
         function createButtons(name) {
             let ButtonName = name;
             ButtonName = document.createElement("button");
@@ -43,35 +43,26 @@ async function getPokemonNames() {
         let buttonBox = document.createElement("div");
         buttonBox.classList.add("buttons");
         buttonBox.setAttribute("id", "allButtons");
-        const pages = ["First", "Previous"];
+        const pages = ["Previous"];
         for (let i = 1; i <= 10; i++) pages.push(i);
         pages.push("Next");
-        pages.push("Last");
         for (let buttons of pages) {
             buttons = createButtons(buttons);
             buttonBox.append(buttons);
         }
         document.body.append(buttonBox);
-        // adding page click functionality
+       
         const btngroup = document.getElementsByName("pageButtons");
         let currentPage = 1;
         for (let buttons of btngroup) {
             buttons.addEventListener("click", () => {
-                // contain.innerHTML = " ";
+
                 contain.innerHTML=document.querySelector('.containbody').innerHTML;
                 let temp = document.getElementById(currentPage.toString());
                 let pageNumber;
                 
                 row.innerHTML = ``;
                 switch (buttons.id) {
-                    case "First":
-                        pageNumber = 1;
-                        currentPage = 1;
-                        break;
-                    case "Last":
-                        pageNumber = 10;
-                        currentPage = 10;
-                        break;
                     case "Previous":
                         if (currentPage > 1) {
                             pageNumber = currentPage - 1;
@@ -99,8 +90,8 @@ async function getPokemonNames() {
                 getPokemonData(pageContent, pageNumber);
             });
         }
-    } catch (err) {
-        console.error(err);
+    } catch (error) {
+        console.error(error);
     }
 }
 getPokemonNames();
@@ -112,9 +103,8 @@ async function getPokemonData(arrayData, page) {
         arrayData.forEach(async (element) => {
             let pokemonName = element.name;
 
-            // contentDiv.innerHTML = ``;
-            let res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
-            let data = await res.json();
+            let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+            let data = await response.json();
             let card = document.createElement('div')
             card.setAttribute('class', 'card');
             card.setAttribute('title', 'click here');
@@ -199,6 +189,6 @@ async function getPokemonData(arrayData, page) {
 
         });
     } catch (error) {
-        console.error('error')
+        console.error(error)
     }
 }

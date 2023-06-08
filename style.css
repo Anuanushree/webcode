@@ -6,10 +6,6 @@
 }
 
 .card:hover {
-    /* text-shadow: 2px 4px 3px 4px; */
-    /* background-color: aliceblue; */
-    /* box-shadow: 8px 28px 50px rgba(39, 44, 49, .07), 1px 6px 12px rgba(39, 44, 49, .04); */
-    /* transition: all .4s ease; */
     transform: scale(1.1);
     box-shadow: 0 10px 50px rgba(217, 31, 106, 0.5);
 
@@ -81,20 +77,21 @@ ul {
 }
 
 .btn:hover {
-    background-color: blue;
+    background-color: red;
     text-decoration: none;
 }
 
 .btn:active {
-    background-color: red;
+    background-color: blue;
 }
-
+btn:focus {
+    background: olive;
+}
 p {
     font-size: x-large;
 }
 
 .row1 {
-
     color: white;
     margin-left: 20%;
     border: 1px blue solid;
